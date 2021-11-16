@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply text-gray-700 bg-gray-100;
+  }
   h1 {
     @apply text-4xl font-semibold;
   }
@@ -17,6 +20,6 @@
     @apply mt-6 text-lg;
   }
   li {
-    @apply mt-3 text-lg;
+    @apply text-lg;
   }
 }
