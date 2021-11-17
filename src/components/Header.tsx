@@ -38,11 +38,11 @@ export default function Header({ setIsSidebarOpen }: Props) {
             </Link>
           </li>
         </ul>
-        <Link href="/contact">
-          <a className="hidden mt-0 text-right md:flex w-36">Get in touch</a>
-        </Link>
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-end md:w-36">
           <MoonIcon onClick={toggleTheme} className="mr-3 cursor-pointer w-7" />
+          <Link href="/contact">
+            <a className="hidden mt-0 text-right md:flex">Get in touch</a>
+          </Link>
           <MenuIcon
             onClick={() => setIsSidebarOpen(true)}
             className="cursor-pointer w-7 md:hidden"
