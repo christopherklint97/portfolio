@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="absolute bottom-0 flex justify-center w-full p-5 bg-gray-300">
+    <footer className="absolute bottom-0 flex justify-center w-full p-5 bg-gray-300 dark:bg-gray-700">
       <div className="flex flex-row justify-between w-36">
         <a
           href="https://www.linkedin.com/in/christopherklint/"

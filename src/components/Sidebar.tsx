@@ -23,7 +23,7 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
   return (
     <div
       ref={node}
-      className="absolute top-0 z-10 w-48 h-screen p-6 bg-gray-100 shadow"
+      className="fixed top-0 z-10 w-48 h-screen p-6 bg-gray-100 shadow dark:bg-gray-800"
     >
       <ul>
         <li className="mt-3">
