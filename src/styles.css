@@ -19,6 +19,9 @@
   a {
     @apply mt-6 text-lg;
   }
+  a {
+    @apply text-purple-600 dark:text-purple-400;
+  }
   li {
     @apply text-lg;
   }

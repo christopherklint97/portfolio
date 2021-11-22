@@ -1,9 +1,7 @@
-const withMDX = require("@next/mdx")({
-  extension: /\.mdx?$/,
-});
-
 /** @type {import('next').NextConfig} */
-module.exports = withMDX({
+module.exports = {
   reactStrictMode: true,
-  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-});
+  images: {
+    domains: ["images.unsplash.com"],
+  },
+};

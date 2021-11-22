@@ -28,17 +28,17 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
       <ul>
         <li className="mt-3">
           <Link href="/blog">
-            <a>Blog</a>
+            <a className="text-gray-700 dark:text-gray-200">Blog</a>
           </Link>
         </li>
         <li className="mt-3">
           <Link href="/about">
-            <a>About</a>
+            <a className="text-gray-700 dark:text-gray-200">About</a>
           </Link>
         </li>
         <li className="mt-3">
           <Link href="/contact">
-            <a>Get in touch</a>
+            <a className="text-gray-700 dark:text-gray-200">Get in touch</a>
           </Link>
         </li>
       </ul>
