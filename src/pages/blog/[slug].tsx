@@ -19,9 +19,9 @@ export default function BlogPost({
         <Image
           src={imageLink}
           width="1024"
-          height="600"
+          height="500"
           objectFit="cover"
-          objectPosition="bottom"
+          objectPosition="center"
           alt=""
         />
         <a
@@ -38,7 +38,7 @@ export default function BlogPost({
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { params } = context;
-  const slug: string = params?.slug ? (params.slug as string) : "";
+  const slug: string = (params?.slug as string) || "";
 
   const post = getPostBySlug(slug, [
     "title",

@@ -37,9 +37,12 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
           </Link>
         </li>
         <li className="mt-3">
-          <Link href="/contact">
-            <a className="text-gray-700 dark:text-gray-200">Get in touch</a>
-          </Link>
+          <a
+            href="mailto:christopher.klint@gmail.com"
+            className="text-gray-700 dark:text-gray-200"
+          >
+            Get in touch
+          </a>
         </li>
       </ul>
     </div>

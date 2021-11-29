@@ -25,4 +25,7 @@
   li {
     @apply text-lg;
   }
+  pre {
+    @apply p-8 mt-6 overflow-x-auto bg-gray-200 dark:bg-gray-700;
+  }
 }
