@@ -27,16 +27,6 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
     >
       <ul>
         <li className="mt-3">
-          <Link href="/blog">
-            <a className="text-gray-700 dark:text-gray-200">Blog</a>
-          </Link>
-        </li>
-        <li className="mt-3">
-          <Link href="/about">
-            <a className="text-gray-700 dark:text-gray-200">About</a>
-          </Link>
-        </li>
-        <li className="mt-3">
           <a
             href="mailto:christopher.klint@gmail.com"
             className="text-gray-700 dark:text-gray-200"

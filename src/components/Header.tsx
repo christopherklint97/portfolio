@@ -28,18 +28,6 @@ export default function Header({ setIsSidebarOpen }: Props) {
             Christopher Klint
           </a>
         </Link>
-        <ul className="flex-row justify-center hidden md:flex w-28">
-          <li>
-            <Link href="/blog">
-              <a className="mr-4 text-gray-700 dark:text-gray-200">Blog</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a className="mr-4 text-gray-700 dark:text-gray-200">About</a>
-            </Link>
-          </li>
-        </ul>
         <div className="flex flex-row justify-end md:w-36">
           <MoonIcon onClick={toggleTheme} className="mr-3 cursor-pointer w-7" />
           <a

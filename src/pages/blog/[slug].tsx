@@ -36,9 +36,8 @@ export default function BlogPost({
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { params } = context;
-  const slug: string = (params?.slug as string) || "";
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = (params?.slug as string) || "";
 
   const post = getPostBySlug(slug, [
     "title",
