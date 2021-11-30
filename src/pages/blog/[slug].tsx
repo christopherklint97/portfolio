@@ -18,11 +18,13 @@ export default function BlogPost({
       <div className="mt-12">
         <Image
           src={imageLink}
-          width="1024"
-          height="500"
+          width="736"
+          height="369"
           objectFit="cover"
           objectPosition="center"
           alt=""
+          placeholder="empty"
+          className="bg-gray-200 dark:bg-gray-700"
         />
         <a
           href={unsplashLink}
