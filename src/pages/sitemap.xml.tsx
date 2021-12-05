@@ -14,14 +14,10 @@ export const getServerSideProps: any = ({ res }: { res: ServerResponse }) => {
     production: "https://www.christopherklint.com",
   }[process.env.NODE_ENV];
 
+  const pagesDirectory = join(process.cwd(), "src", "pages");
+
   const staticPages = fs
-    .readdirSync(
-      {
-        development: join(process.cwd(), "src", "pages"),
-        test: join(process.cwd(), "src", "pages"),
-        production: "./",
-      }[process.env.NODE_ENV]
-    )
+    .readdirSync(pagesDirectory)
     .filter((staticPage) => {
       return ![
         "_app.tsx",
@@ -37,8 +33,7 @@ export const getServerSideProps: any = ({ res }: { res: ServerResponse }) => {
       return `${baseUrl}/${staticPagePath.replace(".tsx", "")}`;
     });
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
       ${[`${baseUrl}/`, ...staticPages]
         .map((url) => {
           return `
