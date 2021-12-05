@@ -3,18 +3,24 @@ import { Layout } from "../components";
 import "../styles/global.css";
 import "../styles/prism.css";
 import { ThemeProvider } from "next-themes";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider
-      attribute="class"
-      storageKey="nightwind-mode"
-      defaultTheme="light"
-    >
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <ThemeProvider
+        attribute="class"
+        storageKey="nightwind-mode"
+        defaultTheme="light"
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </>
   );
 }
 

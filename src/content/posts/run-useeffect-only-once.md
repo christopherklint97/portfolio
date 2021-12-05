@@ -1,6 +1,6 @@
 ---
 title: "How to run useEffect only once"
-subheader: "Say goodbye to unneccessary rerenders"
+subheader: "Say goodbye to unneccessary rerenders in React with just a simple empty array."
 createdAt: "2021-11-29T15:19:28.603Z"
 imageLink: "https://images.unsplash.com/photo-1594882645126-14020914d58d?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=2400"
 imageCaption: "Photo by Cameron Venti"
@@ -40,7 +40,7 @@ To use the useEffect hook only once, you need to provide an empty array as your 
 ```jsx
 useEffect(() => {
   console.log("I only ran once!");
-}, []); // empty array goes here
+}, []);
 ```
 
 This extremely simple change makes sure that when the component mounts, this useEffect will only run on the initial render. All renders after this will be ignored.
